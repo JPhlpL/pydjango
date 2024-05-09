@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head>
+    <title>
+    </title>
+</head>
+
+<body>
+
+    {% for post in info %}
+        {{ post.employee }}<br>
+        {{ post.salary }}<br>
+    {% endfor %}
+
+    {%load crispy_forms_tags %} 
+    {%block content%}
+        <form method="get" action="#">
+            {{ form | crispy }}
+            <input type="submit" value="Search">
+        </form>
+    {%endblock content%}
+</body>
+
+</html>
